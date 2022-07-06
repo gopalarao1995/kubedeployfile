@@ -1,0 +1,15 @@
+kind: service 
+apiversion: v1
+metadata: mrdevops
+ nmae: mrdevops
+  labels:
+   app:
+spec:
+ ports:
+  - port: 8080
+    targetport: 80
+    nodeport: 31200
+    selector:
+     app: mrdevops
+    type: loadBalncer
+    

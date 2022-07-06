@@ -1,0 +1,20 @@
+kind: deployment apiversion: apps/v1
+metadata:
+  name: mrdevops
+spec:
+  replicas: 2
+   selecctor:
+    matchlabels:
+     app: mrdevops
+  template:
+   labels:
+    app:
+     mrdevops
+     spec;
+     containers:
+      -name: mrdevops
+       images: 
+        imagespullpolicy: always
+        ports:
+         - containerport: 80
+         
